@@ -8,7 +8,7 @@ int absoluteValue(int number)
 		return number;
 }
 bool IsDigit(char symbol) {
-		return symbol >= 48 && symbol <= 57;
+	return symbol >= '0' && symbol <= '9';
 }
 bool isLower(char symbol) {
 	return symbol >= 'a' && symbol <= 'z';
@@ -173,6 +173,10 @@ int getRemainder(int first, int second) {
 	int quotient = first / second;
 	int remainder = first - (second * quotient);
 	return remainder;
+}
+int getDivision(int first, int second) 
+{
+	
 }
 
 int main()
