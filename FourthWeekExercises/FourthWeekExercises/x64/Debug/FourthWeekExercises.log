@@ -2,8 +2,8 @@
 D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(55,25): warning C4018: '>=': signed/unsigned mismatch
 D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(101,15): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
 D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(102,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(42,1): warning C4715: 'toCharacter': not all control paths return a value
 D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(30,1): warning C4715: 'toLower': not all control paths return a value
-D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(36,1): warning C4715: 'toNumber': not all control paths return a value
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(42,1): warning C4715: 'toCharacter': not all control paths return a value
 D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(24,1): warning C4715: 'toUpper': not all control paths return a value
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\FourthWeekExercises\FourthWeekExercises.cpp(36,1): warning C4715: 'toNumber': not all control paths return a value
   FourthWeekExercises.vcxproj -> D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\FourthWeekExercises\x64\Debug\FourthWeekExercises.exe

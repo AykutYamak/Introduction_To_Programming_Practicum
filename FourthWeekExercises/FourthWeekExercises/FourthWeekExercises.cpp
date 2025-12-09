@@ -176,9 +176,136 @@ int getRemainder(int first, int second) {
 }
 int getDivision(int first, int second) 
 {
-	
+	int result = 0;
+	if (first<0 || second < 0)
+	{
+		first = absoluteValue(first);
+		second = absoluteValue(second);
+	}
+	if (second != 0)
+	{
+		while (first>=second)
+		{
+			first -= second;
+			result++;
+		}
+	}
+	else
+	{
+		std::cout << "Divison by 0 is not allowed!";
+		return 0;
+	}
+	return result;
+}
+int squareRootToLower(int number) {
+	int i = 0;
+	if (number == 0 || number < 0)
+	{
+		return 0;
+	}
+	else
+	{
+		
+		while ((i+1)*(i+1)<=number)
+		{
+			i++;
+		}
+	}
+	return i;
+}
+bool isPerfect(unsigned number) {
+	int sum = 0;
+	int helper = number / 2;
+	if (number  == 0)
+	{
+		return true;
+	}
+	for (int i = 1; i <= helper; i++)
+	{
+		if (number%i == 0)
+		{
+			sum += i;
+		}
+	}
+	if (sum == number)
+	{
+		return true;
+	}
+	return false;
+}
+bool isAnArmstrongNumber(int number) {
+	if (number >=0 && number <= 9)
+	{
+		return true;
+	}
+	int n = getLength(number);
+	int sum = 0;
+	int wholeNumber = number;
+		while (number!=0)
+	{
+		int multiplier = number % 10;
+		int helper = number % 10;
+		for (int i = 1; i < n; i++)
+		{
+			helper *= multiplier;
+		}
+		sum += helper;
+		number /= 10;
+	}
+	if (sum == wholeNumber)
+	{
+		return true;
+	}
+	return false;
+}
+void Collatz(int n) {
+	int i = 0;
+	while(i<500 && n!=1)
+	{
+		std::cout << n << " ";
+		if (n%2==0)
+		{
+			n /= 2;
+		}
+		else
+		{
+			n = 3 * n + 1;
+		}
+		i++;
+	}
+	if (n==1)
+	{
+		std::cout << 1;
+	}
+}
+int factorial(int n)
+{
+	int result = 1;
+	for (int i = 2; i <= n; i++)
+		result *= i;
+	return result;
 }
 
+int binomial(int n, int k)
+{
+	return factorial(n) / (factorial(k) * factorial(n - k));
+}
+
+void printPascalTriangle(int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < n - i - 1; j++)
+		{
+			std::cout << " ";
+		}
+		for (int k = 0; k <= i; k++)
+		{
+			std::cout << binomial(i, k) << " ";
+		}
+		std::cout << std::endl;
+	}
+}
 int main()
 {
 	// 1 
@@ -206,15 +333,13 @@ int main()
 	b = '3';
 	std::cout << toNumber(b);
 	std::cout << toCharacter(a);*/
-	
 	// 5
 	/*int a = 0;
 	std::cout << getLength(a);*/
-	
 	// 6
 	//int a;
 	//std::cin >> a;
-	//std::cout << getDigitOnPosition(a, 4);
+	//std::cout << getDigitOnPosition(a, 6);
 	
 	// 7
 	/*int a, b;
@@ -259,8 +384,34 @@ int main()
 	//int remainder = getRemainder(first, second);
 	//std::cout << remainder;
 	
-	// 15
+	//15
+	//int a, b;
+	//std::cin >> a >> b;
+	//std::cout << getDivision(a,b);
+	
+	//16
+	/*int a;
+	std::cin >> a;
+	int result = squareRootToLower(a);
+	std::cout << result;*/
+	
+	//17
+	//int a;
+	//std::cin >> a;
+	//std::cout << (isPerfect(a) ? "true" : "false");
+	
+	//18
+	/*int a;
+	std::cin >> a;
+	std::cout << ((isAnArmstrongNumber(a)) ? "true" : "false");*/
 
+	//19
+	//int a;
+	//std::cin >> a;
+	//Collatz(a);
+	
+	//20
+	printPascalTriangle(5);
 }
 
 

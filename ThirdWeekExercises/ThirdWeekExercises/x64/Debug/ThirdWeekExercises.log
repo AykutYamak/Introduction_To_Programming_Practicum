@@ -1,2 +1,4 @@
 ﻿  ThirdWeekExercises.cpp
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\ThirdWeekExercises\ThirdWeekExercises\ThirdWeekExercises.cpp(392,20): warning C4018: '<': signed/unsigned mismatch
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\ThirdWeekExercises\ThirdWeekExercises\ThirdWeekExercises.cpp(394,18): warning C4018: '<': signed/unsigned mismatch
   ThirdWeekExercises.vcxproj -> D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\ThirdWeekExercises\x64\Debug\ThirdWeekExercises.exe
