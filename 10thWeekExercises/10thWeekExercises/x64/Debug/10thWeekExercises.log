@@ -1,0 +1,5 @@
+﻿  10thWeekExercises.cpp
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\10thWeekExercises\10thWeekExercises\10thWeekExercises.cpp(85,28): warning C4018: '<': signed/unsigned mismatch
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\10thWeekExercises\10thWeekExercises\10thWeekExercises.cpp(87,32): warning C4018: '<': signed/unsigned mismatch
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\10thWeekExercises\10thWeekExercises\10thWeekExercises.cpp(133,10): warning C4101: 'arr': unreferenced local variable
+  10thWeekExercises.vcxproj -> D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\10thWeekExercises\x64\Debug\10thWeekExercises.exe
