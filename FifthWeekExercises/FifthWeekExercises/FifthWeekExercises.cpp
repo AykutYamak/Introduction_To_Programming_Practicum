@@ -426,10 +426,6 @@ int main()
     //15
     int result;
     result = ComplementNumbersAndReturnSmallestOne(arr, SIZE);
-    for (int i = 0; i < SIZE; i++)
-    {
-        std::cout << arr[i] << " ";
-    }
     std::cout << "Smallest number is: " << result;
 }
 
