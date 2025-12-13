@@ -262,12 +262,95 @@ void merge(int arr1[], int arr2[], int size1, int size2, int result[])
         std::cout << result[i] << " ";
     }
 }
-//void hasUnimodalSubarray(int arr[], int start, int end) {
-//    for (int i = start; i < end-1; i++)
-//    {
-//
-//    }
-//}
+bool hasUnimodalSubarray(int arr[], int start, int end) {
+    int k = start;
+    bool check = false;
+
+    int i;
+    for (i = start; i < end; i++)
+    {
+        if (arr[i] < arr[i + 1])
+        {
+            check = true;
+        }
+        else
+        {
+            k = i;   
+            break;
+        }
+    }
+
+    if (i == end) 
+    {
+        return false;
+    }
+        
+
+    if (!check)
+    {
+        return false;
+    }
+
+    if (k == end)
+    {
+        return false;
+    }
+        
+    check = false;
+    for (int j = k; j < end; j++)
+    {
+        if (arr[j] > arr[j + 1])
+        {
+            check = true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    return check;
+}
+void moveZeros(int arr[], int size) {
+    int k = 0;
+    // 0 0 1 2 3
+    for (int i = 0; i < size; i++)
+    {
+        if (arr[i]!=0)
+        {
+            arr[k] = arr[i];
+            k++;
+        }
+    }
+    while (k<size)
+    {
+        arr[k] = 0;
+        k++;
+    }
+    for (int i = 0; i < size; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+}
+int ComplementNumbersAndReturnSmallestOne(int arr[], int size) {
+    int start = arr[0];
+    if (!isSortedAscending(arr, size))
+    {
+        return -1;
+    }
+    if (isSortedAscending(arr,size))
+    {
+        for (int i = 0; i < size; i++)
+        {
+            if (arr[i] != start + i)
+            {
+                return start + i;
+            }
+        }
+    }
+    return -1;
+}
+
 int main()
 {
     // 1
@@ -331,4 +414,22 @@ int main()
     int mergedArr[SIZE + SIZE2];
     merge(arr, arr2, SIZE, SIZE2, mergedArr); */
 
+    //13
+    /*std::cout << "Enter start and end indexes: " << std::endl;
+    int start, end;
+    std::cin >> start >> end;
+    std::cout << ((hasUnimodalSubarray(arr, start, end) ? "true" : "false"));*/
+
+    //14
+    //moveZeros(arr, SIZE);
+    
+    //15
+    int result;
+    result = ComplementNumbersAndReturnSmallestOne(arr, SIZE);
+    for (int i = 0; i < SIZE; i++)
+    {
+        std::cout << arr[i] << " ";
+    }
+    std::cout << "Smallest number is: " << result;
 }
+
