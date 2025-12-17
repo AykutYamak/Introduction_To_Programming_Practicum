@@ -128,7 +128,6 @@ void extractDigitsInRange(int& number, int i, int j) {
 	}
 	number = result/10;
 }
-
 void swapTwoNumbersDigitsOnPosition(int& n, int& m, int k) {
 	int lengthN = getLength(n);
 	int lengthM = getLength(m);
@@ -241,6 +240,204 @@ void removeNegativeNumbers(int arr[], int size)
 	std::cout << std::endl;
 }
 
+void increaseByOneV2(int arr[], int size) {
+	if (size > 5)
+	{
+		std::cout << "Way too big size!";
+		return;
+	}
+	int number = 0;
+	for (int i = 0; i < size; i++)
+	{
+		number += arr[i];
+		number *= 10;
+	}
+	number /= 10;
+	if (number > 10000)
+	{
+		std::cout << "Way too big number!";
+		return;
+	}
+	number++;
+	for (int i = size-1; i >= 0; i--)
+	{
+		arr[i] = number % 10;
+		number /= 10;
+	}
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+}
+
+void increaseByOne(int arr[], int size) {
+	if (size>5)
+	{
+		std::cout << "Way too big size!";
+		return;
+	}
+	int number = 0; 
+	for (int i = 0; i < size; i++)
+	{
+		number += arr[i];
+		number *= 10;
+	}
+	number /= 10;
+	if (number>10000)
+	{
+		std::cout << "Way too big number!";
+		return;
+	}
+	for (int i = size-1; i >= 0; i--)
+	{
+		if (arr[i]!=9)
+		{
+			arr[i]++;
+			break;
+		}
+		else
+		{
+			arr[i] = 0;
+		}
+	}
+	std::cout << "[";
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << " " << arr[i];
+	}
+	std::cout << " ]";
+}
+
+void MakeZerosNumNotOnIndex(int arr[], int size) {
+	if (size > 9)
+	{
+		std::cout << "Way too big size!";
+		return;
+	}
+	int number = 0;
+	bool check = false;
+	for (int i = 0; i < size ; i++)
+	{
+		number = arr[i];
+		while (number!=0)
+		{
+			if (number%10==i)
+			{
+				check = true;
+				break;
+			}
+			number /= 10;
+		}
+		if (!check)
+		{
+			arr[i] = 0;
+		}
+		check = false;
+	}
+	for (int i = 0; i < size; i++)
+	{
+		std::cout << arr[i] << " ";
+	}
+}
+
+int firstMostRepetitiveNumber(int arr[], int size) {
+	int countMostRepetitive = 0;
+	int helperCount = 0;
+	int mostRepetitiveNumber = 0;
+	for (int i = 0; i < size; i++)
+	{
+		for (int j = i; j < size; j++)
+		{
+			if (arr[i] == arr[j])
+			{
+				helperCount++;
+			}
+		}
+		if (countMostRepetitive<helperCount)
+		{
+			countMostRepetitive = helperCount;
+			mostRepetitiveNumber = arr[i];
+		}
+		helperCount = 0;
+	}
+	return mostRepetitiveNumber;
+
+		
+}
+//	int arr1[5] = {2, 4, 1, 7, 8};
+// int arr2[4] = { 1,2,3,5 };
+void getUnionOfArrays(int arr[], int size1, int arr2[],int size2, int result[]) {
+	int k = 0;
+	for (int i = 0; i < size1; i++)
+	{
+		result[k] = arr[i];
+		k++;
+	}
+	for (int i = 0; i < size2; i++)
+	{
+		bool check = false;
+		int number = 0;
+		for (int j = 0; j < k; j++)
+		{
+			if (arr2[i]==result[j])
+			{
+				check = true;
+				break;
+			}
+			
+		}
+		if (!check)
+		{
+			result[k] = arr2[i];
+			k++;
+		}
+		
+	}
+
+
+	for (int i = 0; i < k; i++)
+	{
+		std::cout << result[i] << " ";
+	}
+
+}
+bool checkIfArrayIsSubarray(int arr[],int size, int contender[], int size2) {
+	if (size<size2)
+	{
+		return false;
+	}
+	if (size2 == 0)
+	{
+		return true;
+	}
+	int k = 0;
+	for (int i = 0; i+size2 <= size; i++)
+	{
+		bool check = false;
+		if (arr[i] == contender[0])
+		{
+			k = i;
+			for (int j = 0; j < size2; j++)
+			{
+				if (arr[k] == contender[j])
+				{
+					check = true;
+					k++;
+				}
+				else
+				{
+					check = false;
+					break;
+				}
+			}
+			if (check == true)
+			{
+				return true;
+			}
+		}
+	}
+	return false;
+}
 int main()
 {
 	//Introduction exercises
@@ -302,12 +499,37 @@ int main()
 	std::cout << countSwapsToMakeNumbersEqual(n, a, b);*/
 	
 	//03
-	constexpr int size = 7;
-	int arr[size];
-	for (int i = 0; i < size; i++)
-	{
-		std::cin >> arr[i];
-	}
-	removeNegativeNumbers(arr, size);
+	//constexpr int size = 7;
+	//int arr[size];
+	//for (int i = 0; i < size; i++)
+	//{
+	//	std::cin >> arr[i];
+	//}
+	//removeNegativeNumbers(arr, size);
 	
+	//04
+	/*int arr[5] = { 0,1,0,0, 9 };
+	increaseByOne(arr, 5);
+	increaseByOneV2(arr, 5);*/
+
+	//05
+	//int arr[9] = { 45,62,23,47,47,65,100 };
+	//MakeZerosNumNotOnIndex(arr, 7);
+
+	//06
+	//int arr[9] = { 6,3,5,7,6,5,3,6,5 };
+	//std::cout << firstMostRepetitiveNumber(arr, 9);
+	
+	//07
+	//int arr1[5] = {2, 4, 1, 7, 8};
+	//int arr2[4] = {1,2,3,5};
+	//int result[9];
+	//getUnionOfArrays(arr1, 5, arr2, 4, result);
+	
+	//08
+	int arr[5] = { 4,4,4,4,4 };
+	int contender[3] = { 4,4,4};
+	std::cout << ((checkIfArrayIsSubarray(arr, 5, contender, 3) ? "true" : "false"));
 }
+
+
