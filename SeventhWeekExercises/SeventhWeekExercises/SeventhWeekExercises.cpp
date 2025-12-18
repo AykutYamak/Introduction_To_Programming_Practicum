@@ -140,6 +140,7 @@ void ToBinaryNumber(int number)
 	}
 }
 
+
 void fromBaseTenToBaseK(int number, int k) {
 	char arr[32];
 	if(number == 0) 
@@ -190,25 +191,103 @@ int reverseNumber(int number) {
 	int result = 0;
 	while (number!=0)
 	{
-		result += number % 10;
-		result *= 10;
-		number / 10;
+		result = result * 10 + number % 10;
+		number /= 10;
 	}
-	return number;
-}
-
-int fromBaseThreeToBaseEight(int number) {
-	int result = 0;
-	while (number!=0)
-	{
-		int digit = 0;
-		digit = number % 8;
-		result += digit;
-		result *= 10;
-		number /= 8;
-	}
-	result = reverseNumber(result);
 	return result;
+}
+int power(int number,int power) {
+	if (number == 0)
+	{
+		return 0;
+	}
+	if (power == 0)
+	{
+		return 1;
+	}
+	int result = 1;
+	for (int i = 0; i < power; i++)
+	{
+		result *= number;
+	}
+	return result;
+}
+int fromBaseThreeToBaseEight(int number) {
+	int helperNumber = 0;
+	int position = 0;
+
+	while (number != 0) {
+		int digit = number % 10;
+		helperNumber += digit * power(3, position);
+		position++;
+		number /= 10;
+	}
+
+	int result = 0;
+	while (helperNumber != 0) {
+		result = result * 10 + (helperNumber % 8);
+		helperNumber /= 8;
+	}
+
+	return reverseNumber(result);
+}
+void fromBaseTwelveToBaseThirteen(char number[],int size) {
+	int helperNumber = 0;
+	int position = 0;
+	char arr[1024];
+	int i = 0;
+	while (number[i] != '\0') {
+		if (number[i] == 'A') {
+			int digit = 10;
+			helperNumber = helperNumber * 12 + digit;
+			i++;
+			continue;
+		}
+		else if (number[i] == 'B')
+		{
+			int digit = 11;
+			helperNumber = helperNumber * 12 + digit;
+			i++;
+			continue;
+		}
+		int digit = number[i]-'0';
+		helperNumber = helperNumber * 12 + digit;
+		i++;
+	}
+	i = 0;
+	while (helperNumber != 0) {
+		if (helperNumber%13 == 10)
+		{
+			arr[i] = 'A';
+			helperNumber /= 13;
+			i++;
+			continue;
+		}
+		else if (helperNumber%13 == 11)
+		{
+			arr[i] = 'B';
+			helperNumber /= 13;
+			i++;
+			continue;
+		}
+		else if (helperNumber%13 == 12)
+		{
+			arr[i] = 'C';
+			helperNumber /= 13;
+			i++;
+			continue;
+		}
+		arr[i] = helperNumber % 13 + '0';
+		helperNumber /= 13;
+		i++;
+	}
+	reverseCharArray(arr, i);
+	int length = i;
+	for (int i = 0; i < length; i++)
+	{
+		std::cout << arr[i];
+	}
+
 }
 int main() {
 	constexpr int size = 3;
@@ -253,7 +332,13 @@ int main() {
 	//fromBaseTenToBaseK(0, 2);
 	
 	//03
-	int number = 11120;
+	/*int number = 11120;
 	number = fromBaseThreeToBaseEight(number);
-	std::cout << number;
+	std::cout << number;*/
+	
+	//04
+	char arr2[2];
+	arr2[0] = 'A';
+	arr2[1] = '\0';
+	fromBaseTwelveToBaseThirteen(arr2, 2);
 }

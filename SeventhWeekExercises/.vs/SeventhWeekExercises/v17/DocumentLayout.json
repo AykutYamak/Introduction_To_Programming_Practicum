@@ -14,11 +14,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -26,9 +30,9 @@
               "Title": "SeventhWeekExercises.cpp",
               "DocumentMoniker": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\SeventhWeekExercises\\SeventhWeekExercises\\SeventhWeekExercises.cpp",
               "RelativeDocumentMoniker": "SeventhWeekExercises\\SeventhWeekExercises.cpp",
-              "ToolTip": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\SeventhWeekExercises\\SeventhWeekExercises\\SeventhWeekExercises.cpp*",
-              "RelativeToolTip": "SeventhWeekExercises\\SeventhWeekExercises.cpp*",
-              "ViewState": "AgIAALoAAAAAAAAAAAAqwMIAAAALAAAAAAAAAA==",
+              "ToolTip": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\SeventhWeekExercises\\SeventhWeekExercises\\SeventhWeekExercises.cpp",
+              "RelativeToolTip": "SeventhWeekExercises\\SeventhWeekExercises.cpp",
+              "ViewState": "AgIAAEcBAAAAAAAAAAAowEoBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-19T13:20:34.291Z",
               "EditorCaption": ""
