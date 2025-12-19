@@ -11,6 +11,7 @@ void PlusOne(char* arr, const int SIZE, int k) {
 		{
 			digit = arr[i] - 'A' + 10;
 		}
+
 		if (digit<k-1)
 		{
 			digit++;
@@ -289,9 +290,89 @@ void fromBaseTwelveToBaseThirteen(char number[],int size) {
 	}
 
 }
+void reverseBinaryBitsInArray(int arr[], int size) {
+	for (int i = 0; i < size; i++)
+	{
+		if (arr[i] == 0)
+		{
+			arr[i] = 1;
+		}
+		else if (arr[i] == 1 || arr[i] == -1)
+		{
+			arr[i] = 0;
+		}
+		else
+		{
+			return;
+		}
+	}
+}
+void multiplyByMinusOneReturnBinary(int number[], int size) {
+	int j = size - 1;
+	int decimal = 0;
+	for (int i = 0; i < size; i++)
+	{
+		decimal += number[i] * power(2, j);
+		j--;
+	}
+	decimal *= -1;
+	int result[8];
+	int i = 0;
+	while (i!=size)
+	{
+		result[i] = decimal % 2;
+		decimal /= 2;
+		i++;
+	}
+	reverseBinaryBitsInArray(result, size);
+	reverse(result, size);
+	char resultHelper[8];
+	for (int i = 0; i < size; i++)
+	{
+		resultHelper[i] = result[i] + '0';
+	}
+	PlusOne(resultHelper, size, 2);
+	for (int j = 0; j < i; j++)
+	{
+		std::cout << resultHelper[j];
+	}
+}
+bool isPalindromInBaseK(unsigned int number, int k) {
+	if (k < 2 || k > 16)
+	{
+		return false;
+	}
+	if (number == 0)
+	{
+		return true;
+	}
+	int arr[32] = {};
+	int count = 0;
+	while (number > 0)
+	{
+		arr[count] = number % k;
+		number /= k;
+		count++;
+	}
+	for (int i = 0, j = count-1; i < j; i++,j--)
+	{
+		if (arr[i] != arr[j])
+		{
+			return false;
+		}
+	}
+	return true;
+}
+bool areEqual(int number[], int number2[], int size1, int size2, int k, int n) {
+	if (k < 10)
+	{
+
+	}
+}
+
 int main() {
-	constexpr int size = 3;
-	char arr[size] = { '0','1','1'};
+	/*constexpr int size = 3;
+	char arr[size] = { '0','1','1'};*/
 	//Introduction Exercises
 	//01
 	/*PlusOne(arr, 2, 16);
@@ -317,10 +398,9 @@ int main() {
 		std::cout << res[i];
 	}*/
 
-	//
-	// 
-	// 
-	// 
+	
+
+
 	//Pract Exercises
 	//
 	// 
@@ -337,8 +417,18 @@ int main() {
 	std::cout << number;*/
 	
 	//04
-	char arr2[2];
+	/*char arr2[2];
 	arr2[0] = 'A';
 	arr2[1] = '\0';
-	fromBaseTwelveToBaseThirteen(arr2, 2);
+	fromBaseTwelveToBaseThirteen(arr2, 2);*/
+	
+	//05
+	/*constexpr int size = 8;
+	int number[size] = { 1,1,1,1,1,1,1,1 };
+	multiplyByMinusOneReturnBinary(number,size);*/
+	
+	//06
+	unsigned number = 585;
+	int k = 2;
+	std::cout << (isPalindromInBaseK(number, k)? "true" : "false");
 }
