@@ -1,2 +1,3 @@
 ﻿  9thWeekExercises.cpp
+D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\9thWeekExercises\9thWeekExercises\9thWeekExercises.cpp(105,13): warning C4244: 'initializing': conversion from '__int64' to 'int', possible loss of data
   9thWeekExercises.vcxproj -> D:\СУ ФМИ\1 Курс\Introduction_To_Programming_Practicum\9thWeekExercises\x64\Debug\9thWeekExercises.exe
