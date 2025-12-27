@@ -127,7 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Homework-UP.cpp" />
+    <ClCompile Include="Task_1_4MI0800750.cpp" />
+    <ClCompile Include="Task_3_4MI0800750.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
