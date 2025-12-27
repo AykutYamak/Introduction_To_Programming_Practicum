@@ -907,7 +907,7 @@
 //		else if (stringCompare(input,"concatLines") == 0)
 //		{
 //			int startLineNumber, count;
-//			std::cout << "Enter the start line's number and the count of lines to merge number (startLinesNumber count): " << std::endl;
+//			std::cout << "Enter the start line's number and the count of lines to concat (startLinesNumber count): " << std::endl;
 //			std::cin >> startLineNumber >> count;
 //			std::cin.ignore();
 //			if (startLineNumber > n || startLineNumber < 1 || count > n || count < 1)

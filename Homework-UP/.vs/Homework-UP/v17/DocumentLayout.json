@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{5B1B7300-CB50-46EB-8677-61B661403330}|Homework-UP\\Homework-UP.vcxproj|D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_2_4MI0800750.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{5B1B7300-CB50-46EB-8677-61B661403330}|Homework-UP\\Homework-UP.vcxproj|solutionrelative:Homework-UP\\Task_2_4MI0800750.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{5B1B7300-CB50-46EB-8677-61B661403330}|Homework-UP\\Homework-UP.vcxproj|D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_3_4MI0800750.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{5B1B7300-CB50-46EB-8677-61B661403330}|Homework-UP\\Homework-UP.vcxproj|solutionrelative:Homework-UP\\Task_3_4MI0800750.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -32,7 +36,7 @@
         },
         {
           "DockedWidth": 294,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -48,26 +52,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Task_2_4MI0800750.cpp",
+              "DocumentMoniker": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_2_4MI0800750.cpp",
+              "RelativeDocumentMoniker": "Homework-UP\\Task_2_4MI0800750.cpp",
+              "ToolTip": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_2_4MI0800750.cpp",
+              "RelativeToolTip": "Homework-UP\\Task_2_4MI0800750.cpp",
+              "ViewState": "AgIAAIABAAAAAAAAAAAmwOYBAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-12-27T10:46:28.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Task_1_4MI0800750.cpp",
               "DocumentMoniker": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_1_4MI0800750.cpp",
               "RelativeDocumentMoniker": "Homework-UP\\Task_1_4MI0800750.cpp",
               "ToolTip": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_1_4MI0800750.cpp",
               "RelativeToolTip": "Homework-UP\\Task_1_4MI0800750.cpp",
-              "ViewState": "AgIAAEUAAAAAAAAAAIAwwEMAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAmwKYAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-26T11:23:58.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Task_3_4MI0800750.cpp",
               "DocumentMoniker": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_3_4MI0800750.cpp",
               "RelativeDocumentMoniker": "Homework-UP\\Task_3_4MI0800750.cpp",
               "ToolTip": "D:\\\u0421\u0423 \u0424\u041C\u0418\\1 \u041A\u0443\u0440\u0441\\Introduction_To_Programming_Practicum\\Homework-UP\\Homework-UP\\Task_3_4MI0800750.cpp",
               "RelativeToolTip": "Homework-UP\\Task_3_4MI0800750.cpp",
-              "ViewState": "AgIAAJgCAAAAAAAAAAAAAKoCAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAKwDAAAAAAAAAAAmwNADAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-25T14:56:37.898Z",
               "EditorCaption": ""
