@@ -75,38 +75,43 @@ void returnNumOnValidPosition(int n) {
 }
 
 void longestPrefix(int n) {
-	char *arr = new char[n+1];
+	char* arr = new char[n+1];
 	char* arr2= new char[n+1];
 	int count = 0;
-	for (int i = 0; i < n; i++)
-	{
-		std::cin >> arr[i];
-	}
-	for (int i = 0; i < n; i++)
-	{
-		std::cin >> arr2[i];
-	}
-	for (int i = 0; i < n; i++)
-	{
-		if (arr[i] == arr2[i])
-		{
-			count++;
-		}
-	}
 	char* result = new char[count + 1];
+	std::cin.getline(arr, n+1);
+	std::cin.getline(arr2, n+1);
 	for (int i = 0; i < n; i++)
 	{
-		if (arr[i] == arr2[i])
+		int currCount = 0;
+		for (int j = i; arr2[j] != '\0' || arr[j] != '\0'; j++)
 		{
-			result[i] = arr[i];
+			if (arr[j] == arr2[j])
+			{
+				currCount++;
+			}
+			else
+			{
+				break;
+			}
+		}
+		if (currCount>count)
+		{
+			count = currCount;
+			delete[] result;
+			result = new char[count + 1];
+			for (int j = 0; j < count; j++)
+			{
+				result[j] = arr[i + j];
+			}
+			result[count] = '\0';
 		}
 	}
-	std::cout << count << " ";
-	for (int i = 0; i < count; i++)
-	{
-		std::cout << result[i];
-	}
-	std::cout << "\0";
+	std::cout << count+1 << " {";
+	std::cout << result << ("\0");
+	delete[] arr;
+	delete[] arr2;
+	delete[] result;
 }
 
 int main()
@@ -129,5 +134,6 @@ int main()
 	//04
 	int n;
 	std::cin >> n;
+	std::cin.ignore();
 	longestPrefix(n);
 }
